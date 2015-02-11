@@ -12,4 +12,4 @@ app.engine('html', require('ejs').renderFile);
 app.get('/', function(req, res){
     res.render('index.html');
 });
-module.exports = app;
+//module.exports = app;
