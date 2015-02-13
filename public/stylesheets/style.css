@@ -1,9 +1,35 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  background-color: #fff;
+* {
+	padding: 0px;
+	margin: 0px;
 }
 
-a {
-  color: #00B7FF;
+body {
+	height: 100%;
+	width: 100%;
+	font: 16px arial, sans-serif;
+}
+
+.container {
+	padding: 0;
+	margin: 0;
+	height: 100%;
+	width: 100%;
+}
+
+.container .navbar {
+	width: 100%;
+	height: 12%;
+	background-color: #1a1a1a;
+}
+
+.container .navbar ul {
+	list-style: none;
+	width: 80%;
+	color: white;
+}
+
+.container .navbar ul li {
+	display: inline-block;
+	padding: 1em 2em;
+	height: 50%;
 }
