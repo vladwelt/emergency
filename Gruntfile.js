@@ -1,11 +1,20 @@
 module.exports = function (grunt) {
 	grunt.initConfig({
+			pkg : grunt.file.readJSON('package.json'),
 			jshint : {
 				files : ['Gruntfile.js','app.js','config/**/*.js'],
 			},
 			watch : {
-				files : ['<%= jshint.files =%>'],
-				tasks : ['jshint']
+				options: {
+					livereload : true,
+				},
+				html: {
+					files : ['index.html'],
+				},
+				js : {
+					files : ['public/js/**/*.js'],
+					task : ['jshint'],
+				}
 			}
 	});
 
@@ -13,5 +22,4 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks('grunt-contrib-watch');
 
 	grunt.registerTask('default',['jshint']);
-	
 };
