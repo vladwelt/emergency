@@ -1,4 +1,5 @@
 module.exports = function (grunt) {
+	var reloadPort=35729;
 	grunt.initConfig({
 			pkg : grunt.file.readJSON('package.json'),
 			jshint : {
@@ -6,14 +7,21 @@ module.exports = function (grunt) {
 			},
 			watch : {
 				options: {
-					livereload : true,
+					livereload : true
 				},
 				html: {
-					files : ['index.html'],
+					files : ['views/*.html'],
+					options : { livereload : reloadPort }
 				},
 				js : {
 					files : ['public/js/**/*.js'],
 					task : ['jshint'],
+				},
+				less : {
+					files : ['public/less/*.less'],
+					options : {
+						livereload : reloadPort
+						}
 				}
 			}
 	});
@@ -21,5 +29,5 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks('grunt-contrib-jshint');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 
-	grunt.registerTask('default',['jshint']);
+	grunt.registerTask('default',['watch']);
 };

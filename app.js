@@ -15,8 +15,7 @@ mongoose.connect(database.url);
 //less-middleware config
 app.use(lessmiddleware('/less', {
     dest : '/css',
-    pathRoot : join(__dirname, 'public'),
-    compress : true
+    pathRoot : join(__dirname, 'public')
 }));
 
 app.use(express.static(join(__dirname , 'public')));
