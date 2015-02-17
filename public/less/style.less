@@ -14,30 +14,33 @@ body {
 	margin: 0;
 	height: 100%;
 	width: 100%;
-}
-
-.container .iconEnterprise {
-	float: left;
-	width: 2%;
-	padding: 2% 2%;
-	background-color: blue;
-	border-radius: 5em;
-}
-
-.container .navbar {
-	width: 100%;
-	height: 12%;
-  background-color: #1a1a1a;
+	.navbar {
+		width: 100%;
+		height: 10%;
+		position : absolute;
+		.bar {
+			width : 95%;
+			background-color: #1a1a1a;
+			position : absolute;
+		}
+		.iconEnterprise {
+			width: 2%;
+			padding: 2% 2%;
+			background-color: blue;
+			border-radius: 5em;
+			position : absolute;
+		}
+	}
 }
 
 .container .navbar ul {
 	list-style: none;
-	width: 80%;
+	width: 100%;
 	color: white;
 }
 
 .container .navbar ul li {
-	display: inline-block;
+	float: right;
 	padding: 1em 2em;
 	height: 50%;
 }

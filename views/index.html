@@ -5,17 +5,17 @@
 		<link rel="stylesheet" type="text/css" href="/font-awesome/css/font-awesome.min.css">
 		<script src="//localhost:35729/livereload.js"></script>
 	</head>
-	<body>
-		<div class="container">
+	<body ng-app="ella">
+		<div class="container" ng-controller="mainController">
 			<nav class="navbar">
 				<div class="iconEnterprise">
 					<i class="fa fa-home"></i>
 				</div>
-				<ul>
+				<ul class="bar">
 					<li class="itembar">Home</li>
 					<li class="itembar">Departamentos</li>
 					<li class="itembar">Solicitudes</li>
-					<li class="itembar">Ingresar</li>
+					<li class="itembar">{{hello}}</li>
 				</ul>
 			</nav>
 			<div class="wrapper">
@@ -28,5 +28,9 @@
 			</div>
 			<footer></footer>
 		</div>
+		<script type="text/javascript" src="angular/angular.min.js"></script>
+		<script type="text/javascript" src="angular-ui-router/release/angular-ui-router.min.js"></script>
+		<script type="text/javascript" src="js/core.js"></script>
+		<script type="text/javascript" src="js/controllers/mainController.js"></script>
 	</body>
 </html>
