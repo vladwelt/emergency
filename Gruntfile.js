@@ -10,7 +10,7 @@ module.exports = function (grunt) {
 					livereload : true
 				},
 				html: {
-					files : ['views/*.html'],
+					files : ['views/*.html','public/partials/**/*.js'],
 					options : { livereload : reloadPort }
 				},
 				js : {
