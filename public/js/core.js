@@ -7,9 +7,14 @@ angular
 	.config(function ($stateProvider, $urlRouterProvider) {
 		$urlRouterProvider.otherwise('/home');
 		$stateProvider
-			.state('/home', {
+			.state('home', {
 				url : '/home',
-				templateUrl : 'views/index.html',
+				templateUrl : 'partials/home.html',
 				controller : 'mainController'
+			})
+			.state('login',{
+				url : '/login',
+				templateUrl : 'partials/login.html',
+				controller : 'loginController'
 			});
 	});
