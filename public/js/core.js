@@ -2,7 +2,8 @@
 
 angular
 	.module('ella',[
-		'ui.router'
+		'ui.router',
+		'btford.socket-io'
 	])
 	.config(function ($stateProvider, $urlRouterProvider) {
 		$urlRouterProvider.otherwise('/home');
@@ -17,4 +18,7 @@ angular
 				templateUrl : 'partials/login.html',
 				controller : 'loginController'
 			});
+	})
+	.factory("socket", function(socketFactory) {
+		return socketFactory();
 	});

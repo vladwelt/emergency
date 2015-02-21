@@ -8,7 +8,8 @@ var bodyParser = require('body-parser');
 var methodOverride = require('method-override');
 var join = require('path').join;
 var lessmiddleware = require('less-middleware');
-
+var server = require('http').createServer(app);
+var io = require('socket.io')(server);
 //mongoose config
 mongoose.connect(database.url);
 
@@ -30,5 +31,5 @@ app.get('/', function(req, res){
     res.render('index.html');
 });
 
-app.listen(port);
+server.listen(port);
 console.log('App listening on port ' + port);
